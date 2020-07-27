@@ -40,7 +40,6 @@ class Titan:
             temp = self.matrix.sections[identifier[0]][identifier[1] + 1]
             if not temp.object and self.moved:
                 if temp.id[1] == 8:
-                    # GameOverScreen()
                     self.section.game.gameover = True
                     return 0
                 self.section.object = None
