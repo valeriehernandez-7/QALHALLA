@@ -1,0 +1,1 @@
+Before run install pygame 

@@ -1,0 +1,95 @@
+{
+    "name": "Ragnarok",
+    "difficulty": "MONJE",
+    "date": "2020-07-26",
+    "hour": "20:00",
+    "duration": "01:30",
+    "level": "lvl1",
+    "gems": 105,
+    "murders": 7,
+    "titans": [
+        {
+            "type": "Orc",
+            "position": [
+                1,
+                0
+            ],
+            "health": 20,
+            "time": 2
+        },
+        {
+            "type": "Skeleton",
+            "position": [
+                2,
+                0
+            ],
+            "health": 5,
+            "time": 2
+        },
+        {
+            "type": "Skeleton",
+            "position": [
+                3,
+                0
+            ],
+            "health": 5,
+            "time": 2
+        },
+        {
+            "type": "Orc",
+            "position": [
+                4,
+                0
+            ],
+            "health": 20,
+            "time": 2
+        }
+    ],
+    "elementals": [
+        {
+            "type": "Air",
+            "position": [
+                0,
+                8
+            ],
+            "health": 9,
+            "time": 14
+        },
+        {
+            "type": "Fire",
+            "position": [
+                1,
+                8
+            ],
+            "health": 18,
+            "time": 18
+        },
+        {
+            "type": "Earth",
+            "position": [
+                2,
+                8
+            ],
+            "health": 14,
+            "time": 68
+        },
+        {
+            "type": "Fire",
+            "position": [
+                3,
+                8
+            ],
+            "health": 18,
+            "time": 56
+        },
+        {
+            "type": "Water",
+            "position": [
+                4,
+                8
+            ],
+            "health": 10,
+            "time": 29
+        }
+    ]
+}
