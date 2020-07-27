@@ -222,7 +222,7 @@ class Matrix:
 
     def create_elemental(self, elemental):
         name = elemental.__name__
-        print("✧", name, "elemental invoked ✧")
+        print("✧", name, "elemental invoked ✧")  # notification
         if self.available(0, 0):
             if name == "Air":
                 return elementals.Air([12, 2], "source/resources/gui/sprites/0-air.png", self)
@@ -325,7 +325,7 @@ class SessionManager:
         self.load_elementals(matrix, data["elementals"])
 
         temp_game.grid = matrix
-        print("⋟ RESUMED BATTLE ⋞")
+        print("⋟ RESUMED BATTLE ⋞")  # notification
         return temp_game
 
     def get_game_state(self, game):

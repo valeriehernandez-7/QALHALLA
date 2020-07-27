@@ -55,7 +55,8 @@ class MenuScreen:
 
         self.menu()
 
-    def menu(self):  # method, sets the display to the main menu format
+    def menu(self):
+        # method, sets the display to the main menu format
         self.screen_state = "menu"  # screen ID
         self.background = pygame.image.load("source/resources/gui/backgrounds/menu.jpg")  # background img
         # --- buttons ---
@@ -70,7 +71,8 @@ class MenuScreen:
         # "CREDITOS" button graphic method from tools
         self.credits_button = tools.Button(self.button_credits_st0, self.button_credits_st1, 132, 565)
 
-    def select_difficulty(self):  # method, sets the display to the difficulty selection screen format (battle mode)
+    def select_difficulty(self):
+        # method, sets the display to the difficulty selection screen format (battle mode)
         self.screen_state = "select_difficulty"  # screen ID
         self.background = pygame.image.load("source/resources/gui/backgrounds/power.jpg")  # background img
         # --- buttons ---
@@ -83,7 +85,8 @@ class MenuScreen:
         # "SIGUIENTE" button graphic method from tools
         self.next_window_button = tools.Button(self.next_window_0, self.next_window_1, 200, 462)
 
-    def player(self):  # method, sets the display to the format of the screen where the user enters the battle name
+    def player(self):
+        # method, sets the display to the format of the screen where the user enters the battle name
         self.screen_state = "player"  # screen ID
         self.background = pygame.image.load("source/resources/gui/backgrounds/player.jpg")  # background img
         # --- buttons ---
@@ -95,7 +98,8 @@ class MenuScreen:
         self.name_text = "INSERTE NOMBRE DE BATALLA"  # instruction text
         self.name = ""
 
-    def check_box(self, name):  # method, checks data entered by user
+    def check_box(self, name):
+        # method, checks data entered by user
         if name == "" or name == "INSERTE NOMBRE DE BATALLA":
             return False
         elif name[0] == " ":
@@ -103,7 +107,8 @@ class MenuScreen:
         else:
             return True
 
-    def load(self):  # method, sets the display to battle loading format, receives and displays data from sessions.json
+    def load(self):
+        # method, sets the display to battle loading format, receives and displays data from sessions.json
         self.screen_state = "load_game"  # screen ID
         self.background = pygame.image.load("source/resources/gui/backgrounds/load.jpg")  # background img
         # --- buttons ---
@@ -118,7 +123,8 @@ class MenuScreen:
         self.time_saved = data["hour"]  # time when the battle was stored
         self.date_saved = data["date"]  # date when the battle was stored
 
-    def scores(self):  # method, sets the display to the best battle time display format
+    def scores(self):
+        # method, sets the display to the best battle time display format
         self.screen_state = "scores"  # screen ID
         self.background = pygame.image.load("source/resources/gui/backgrounds/scores.jpg")  # background img
         # --- buttons ---
@@ -127,7 +133,8 @@ class MenuScreen:
         # --- information's graph-format class ---
         self.table = Table(self.screen)
 
-    def help(self):  # method, sets the display to the help screen format
+    def help(self):
+        # method, sets the display to the help screen format
         self.screen_state = "help"  # screen ID
         self.background = pygame.image.load("source/resources/gui/backgrounds/help.jpg")  # background img
         self.number_page = 0  # stores the current book page
@@ -137,19 +144,21 @@ class MenuScreen:
         self.left_button = tools.Button(self.b_page_0, self.b_page_L, 17, 175)  # button to go previous page
         self.right_button = tools.Button(self.b_page_0, self.b_page_R, 257, 175)  # button to go next page
 
-    def credits(self):  # method, sets the display to show information about the developers of the program
+    def credits(self):
+        # method, sets the display to show information about the developers of the program
         self.screen_state = "credits"  # screen ID
         self.background = pygame.image.load("source/resources/gui/backgrounds/credits.jpg")  # background img
         # --- buttons ---
         # "MENU" button graphic method from tools
         self.menu_button = tools.Button(self.button_menu_st0, self.button_menu_st1, 375, 15)
 
-    def start_game(self):  # method, main function of the game screen, managing events and displaying objects on screen
+    def start_game(self):
+        # method, main function of the game screen, managing events and displaying objects on screen
         icon = pygame.image.load("source/resources/gui/props/icon.png")  # window's icon img
         pygame.display.set_icon(icon)  # window's icon
         pygame.display.set_caption("QALHALLA")  # window's title
         fps = pygame.time.Clock()  # handle events using the pygame-clock
-        tools.music("source/resources/gui/sounds/bass.mp3", 0.3, -1)  # play main_menu
+        tools.music("source/resources/gui/sounds/bass.mp3", 0.3, -1)  # play main menu song theme
         while True:
             pygame.display.update()
             self.screen.blit(self.background, (0, 0))  # displays background img
@@ -299,18 +308,21 @@ class MenuScreen:
                 self.menu_button.update(self.screen, self.cursor)
 
 
-class Table:  # scores display - graphic helper class
-    # in order to receive, organize and display information on the best times and battle names in ascending order
+class Table:
+    # scores display - graphic helper class , in order to receive, organize and display information on the best times
+    # in secs and battle names in ascending order
     def __init__(self, screen):
         self.screen = screen
         self.labels = []
         self.create_labels()
 
-    def load_data(self):  # reads the player's name and the score obtained in the game in scores.txt
+    def load_data(self):
+        # reads the player's name and the score obtained in the game in scores.txt
         file = open("source/resources/data/scores.txt", "r", encoding='utf-8')
         contents = file.read().split("\n")
 
         def sort_list(a, i, j, n):
+            # organizes information
             if j == n:
                 i = i + 1
                 j = 0
@@ -337,6 +349,7 @@ class Table:  # scores display - graphic helper class
         return contents
 
     def create_labels(self):
+        # creates text tag for data
         array = self.load_data()
         for i in array:
             a = tools.Insula_font_13.render(i[0], True, tools.blue)
@@ -345,6 +358,7 @@ class Table:  # scores display - graphic helper class
         self.labels = self.labels[::-1]
 
     def update(self):
+        # display created labels
         for i in range(len(self.labels)):
             if i < 10:
                 self.screen.blit(self.labels[i][0], (175, 260 + (i * 22)))

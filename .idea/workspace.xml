@@ -10,12 +10,13 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="553c5207-13bf-4788-975f-692ac278a651" name="Default Changelist" comment="initial commit">
-      <change beforePath="$PROJECT_DIR$/.idea/QALHALLA.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/QALHALLA.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="553c5207-13bf-4788-975f-692ac278a651" name="Default Changelist" comment="titans updated">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/classes/elementals.py" beforeDir="false" afterPath="$PROJECT_DIR$/source/classes/elementals.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/classes/game.py" beforeDir="false" afterPath="$PROJECT_DIR$/source/classes/game.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/classes/menu.py" beforeDir="false" afterPath="$PROJECT_DIR$/source/classes/menu.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/source/classes/titans.py" beforeDir="false" afterPath="$PROJECT_DIR$/source/classes/titans.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/resources/data/sessions.json" beforeDir="false" afterPath="$PROJECT_DIR$/source/resources/data/sessions.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/classes/tools.py" beforeDir="false" afterPath="$PROJECT_DIR$/source/classes/tools.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,8 +80,30 @@
       <updated>1595817051520</updated>
       <workItem from="1595817054280" duration="183000" />
       <workItem from="1595817327162" duration="257000" />
-      <workItem from="1595817595342" duration="1458000" />
+      <workItem from="1595817595342" duration="7216000" />
     </task>
+    <task id="LOCAL-00001" summary="titans updated">
+      <created>1595820023942</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1595820023942</updated>
+    </task>
+    <task id="LOCAL-00002" summary="titans updated">
+      <created>1595820216339</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1595820216339</updated>
+    </task>
+    <task id="LOCAL-00003" summary="titans updated">
+      <created>1595820275091</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1595820275091</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -98,7 +121,8 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <option name="LAST_COMMIT_MESSAGE" value="" />
+    <MESSAGE value="titans updated" />
+    <option name="LAST_COMMIT_MESSAGE" value="titans updated" />
   </component>
   <component name="WindowStateProjectService">
     <state x="722" y="140" key="#QALHALLA" timestamp="1595819683981">
@@ -121,14 +145,30 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="812" y="239" key="Github.UntrackedFilesDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1595817623037" />
+    <state width="1876" height="285" key="GridCell.Tab.0.bottom" timestamp="1595820377987">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1876" height="285" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1595820377987" />
+    <state width="1876" height="285" key="GridCell.Tab.0.center" timestamp="1595820377987">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1876" height="285" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1595820377987" />
+    <state width="1876" height="285" key="GridCell.Tab.0.left" timestamp="1595820377987">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1876" height="285" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1595820377987" />
+    <state width="1876" height="285" key="GridCell.Tab.0.right" timestamp="1595820377987">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1876" height="285" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1595820377987" />
     <state x="383" y="170" key="SettingsEditor" timestamp="1595817497169">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="383" y="170" key="SettingsEditor/0.0.1920.1080@0.0.1920.1080" timestamp="1595817497169" />
-    <state x="79" y="272" key="Vcs.Push.Dialog.v2" timestamp="1595817421415">
+    <state x="79" y="272" key="Vcs.Push.Dialog.v2" timestamp="1595820290936">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="79" y="272" key="Vcs.Push.Dialog.v2/0.0.1920.1080@0.0.1920.1080" timestamp="1595817421415" />
+    <state x="79" y="272" key="Vcs.Push.Dialog.v2/0.0.1920.1080@0.0.1920.1080" timestamp="1595820290936" />
     <state x="331" y="403" key="git4idea.rebase.GitRebaseDialog" timestamp="1595817483779">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>

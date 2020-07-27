@@ -35,7 +35,7 @@ class Elemental:
             temp = get_nearest(self.section.id[0], self.matrix.sections)
             if temp:
                 self.projectiles.append(Projectile(self.screen, self.projectile_path, self, temp.object))
-                print("✷ Elemental attack", temp.id, "✷")
+                print("✷ Elemental attack", temp.id, "✷")  # notification
 
     def hurt(self, damage):
         tools.sounds("source/resources/gui/sounds/hurt.wav", 0.1)

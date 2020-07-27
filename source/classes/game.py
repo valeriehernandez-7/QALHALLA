@@ -77,20 +77,24 @@ class Game:
         if self.difficulty == "AVATAR":  # low frequency elemental attack configuration (hard level)
             self.attack_freq = 0
 
+        # notification
         print("❆ BATTLE'S NAME:", self.name, " | BATTLE MODE:", self.difficulty, " | DATE & TIME:", self.today, "❆")
 
-    def lvl1(self):  # method, defines the settings for the level 1 screen
+    def lvl1(self):
+        # method, defines the settings for the level 1 screen
         self.background = pygame.image.load("source/resources/gui/backgrounds/lvl1.jpg")  # background img
         self.screen_state = "lvl1"  # screen ID
         self.level_title = "Nivel 1"  # level text
 
-    def lvl2(self):  # method, defines the settings for the level 2 screen
+    def lvl2(self):
+        # method, defines the settings for the level 2 screen
         self.background = pygame.image.load("source/resources/gui/backgrounds/lvl2.jpg")  # background img
         self.level_title = "Nivel 2"  # level text
         self.grid.clean()  # clean matrix
         self.frequency = 0.3  # frequency increases by 30%
 
-    def lvl3(self):  # method, defines the settings for the level 3 screen
+    def lvl3(self):
+        # method, defines the settings for the level 3 screen
         self.background = pygame.image.load("source/resources/gui/backgrounds/lvl3.jpg")  # background img
         self.level_title = "Nivel 3"  # level text
         self.grid.clean()  # clean matrix
@@ -109,13 +113,14 @@ class Game:
             self.lvl3()
         if self.murders == 50:
             self.screen_screen = "winner"  # screen ID
-            print("⫸ VICTORY ⫷")
+            print("⫸ VICTORY ⫷")  # notification
             pygame.mixer.music.stop()  # stops the main menu song
             after_game = AfterGame(self.screen, self.name, int(time.time() - initial), self.menu)
             after_game.winner()  # winner screen
             after_game.setup()  # after_game class loop
 
-    def cards_cs(self):  # method, cards control system is in charge of enabling and disabling the purchase options
+    def cards_cs(self):
+        # method, cards control system is in charge of enabling and disabling the purchase options
         if self.gems >= 200:  # enables the four purchase options
             self.air_button = tools.Button(self.c1_air, self.c1_air, 99, 582)
             self.earth_button = tools.Button(self.c1_earth, self.c1_earth, 188, 583)
@@ -143,28 +148,29 @@ class Game:
             self.fire_button = tools.Button(self.c0_fire, self.c0_fire, 354, 583)
 
     def generator(self, initial):
-        # method,
+        # method, generates character in the matrix, according to game time interval, frequency depends on game level
         if 0 < (time.time() - initial) % 30 < 0.05:
             self.grid.create_object(tools.Gem)
-            print("✦ MAGIC RUNE ✦")
-        if 0 < (time.time() - initial) % (30 - (30 * self.frequency)) < 0.05:
+            print("✦ MAGIC RUNE ✦")  # notification
+        if 0 < (time.time() - initial) % (30 - (30 * self.frequency)) < 0.05:  # most frequent character
             self.grid.create_object(titans.Skeleton)
-            print("⤞ Skeleton's coming ⤞")
+            print("⤞ Skeleton's coming ⤞")  # notification
         if 0 < (time.time() - initial) % (70 - (70 * self.frequency)) < 0.05:
             if self.started:
                 self.grid.create_object(titans.Elf)
-                print("➼ Elf's coming ➼")
+                print("➼ Elf's coming ➼")  # notification
         if 0 < (time.time() - initial) % (90 - (90 * self.frequency)) < 0.05:
             if self.started:
                 self.grid.create_object(titans.Orc)
-                print("✠ Orc's coming ✠")
+                print("✠ Orc's coming ✠")  # notification
         if 0 < (time.time() - initial) % (120 - (120 * self.frequency)) < 0.05:
             if self.started:
-                self.grid.create_object(titans.Dragon)
-                print("☬ Dragon's coming ☬")
+                self.grid.create_object(titans.Dragon)  # less frequent character
+                print("☬ Dragon's coming ☬")  # notification
             self.started = True
 
     def titan_attack(self, initial):
+        # method, manages the frequency of attack of the titans
         titans_array = self.grid.get_titans(0, 0, [])
         if 7 < (time.time() - initial) % 20 < 7.05:
             if self.moving:
@@ -190,6 +196,8 @@ class Game:
             self.moving = True
 
     def entity_actions(self):
+        #  method, supervises character actions, performs matrix reading and returns attack or movement according
+        #  to matrix cell and character type
         elementals_array = self.grid.get_elementals(0, 0, [])
         for elemental in elementals_array:
             elemental.attack()
@@ -200,21 +208,22 @@ class Game:
             titan.move()
 
 
-    def start_game(self):  # method, run the game
+    def start_game(self):
+        # method, main function of the game screen, managing events and displaying objects on screen
         fps = pygame.time.Clock()
-        initial = time.time()
-        tools.music("source/resources/gui/sounds/game.mp3", 0.05, -1)
+        initial = time.time()  # returns the time as a floating point number expressed in seconds since the epoch
+        tools.music("source/resources/gui/sounds/game.mp3", 0.05, -1)  # play game song theme
         while True:
             pygame.display.update()
-            fps.tick(30)
+            fps.tick(30)  # frames per second
             self.change_level(initial)
-            if self.gameover:
-                print("⤲ GAME OVER ⤲")
-                pygame.mixer.music.stop()  # stops the game song
+            if self.gameover:  # game over state
+                print("⤲ GAME OVER ⤲")  # notification
+                pygame.mixer.music.stop()  # stops the game screen theme song
                 after_game = AfterGame(self.screen, self.name, int(time.time() - initial), self.menu)
                 after_game.game_over()
                 after_game.setup()
-                break
+                break  # stops game screen loop
             else:
                 self.cards_cs()
                 self.generator(initial)
@@ -227,32 +236,36 @@ class Game:
 
                     # --- cursor-events ---
                     elif event.type == pygame.MOUSEBUTTONDOWN:
-                        if self.cursor.colliderect(self.save_button.rect):
-                            tools.sounds("source/resources/gui/sounds/button.wav", 0.5)
-                            self.session_manager.save(self)
-                            print("☸", self.name, "SUCCESSFULLY SAVED ☸")
+                        if self.cursor.colliderect(self.save_button.rect):  # save game event
+                            tools.sounds("source/resources/gui/sounds/button.wav", 0.5)  # button pressed sound
+                            self.session_manager.save(self)  # class, stores game play information
+                            print("☸", self.name, "SUCCESSFULLY SAVED ☸")  # notification
                         elif self.cursor.colliderect(self.muted_button.rect):
-                            tools.sounds("source/resources/gui/sounds/button.wav", 0.5)
-                            pygame.mixer.music.stop()
-                            print("♫ MUTED MUSIC ♫")
+                            tools.sounds("source/resources/gui/sounds/button.wav", 0.5)  # button pressed sound
+                            pygame.mixer.music.stop()  # silence game screen theme song
+                            print("♫ MUTED MUSIC ♫")  # notification
                         elif self.cursor.colliderect(self.air_button.rect) and (self.gems >= 50):
+                            # invoked air elemental
                             tools.sounds("source/resources/gui/sounds/invoke.wav", 0.5)
-                            self.cursor.elemental = self.grid.create_object(elementals.Air)
-                            self.gems -= 50
+                            self.cursor.elemental = self.grid.create_object(elementals.Air)  # elemental generation
+                            self.gems -= 50  # elemental price
                         elif self.cursor.colliderect(self.earth_button.rect) and (self.gems >= 100):
+                            # invoked earth elemental
                             tools.sounds("source/resources/gui/sounds/invoke.wav", 0.5)
-                            self.cursor.elemental = self.grid.create_object(elementals.Earth)
-                            self.gems -= 100
+                            self.cursor.elemental = self.grid.create_object(elementals.Earth)  # elemental generation
+                            self.gems -= 100  # elemental price
                         elif self.cursor.colliderect(self.water_button.rect) and (self.gems >= 150):
+                            # invoked water elemental
                             tools.sounds("source/resources/gui/sounds/invoke.wav", 0.5)
-                            self.cursor.elemental = self.grid.create_object(elementals.Water)
-                            self.gems -= 150
+                            self.cursor.elemental = self.grid.create_object(elementals.Water)  # elemental generation
+                            self.gems -= 150  # elemental price
                         elif self.cursor.colliderect(self.fire_button.rect) and (self.gems >= 200):
+                            # invoked fire elemental
                             tools.sounds("source/resources/gui/sounds/invoke.wav", 0.5)
-                            self.cursor.elemental = self.grid.create_object(elementals.Fire)
-                            self.gems -= 200
+                            self.cursor.elemental = self.grid.create_object(elementals.Fire)  # elemental generation
+                            self.gems -= 200  # elemental price
 
-                        x, y = event.pos
+                        x, y = event.pos  # on-screen coordinates
                         for array in self.grid.sections:  # handles events within the matrix zone
                             for section in array:
                                 location = section.pos  # get event position
@@ -262,20 +275,20 @@ class Game:
 
                 # --- graphics ---
                 # --- text ---
-                self.level = tools.Trajan_font_15.render(self.level_title, True, tools.white)
-                self.battlename = tools.Insula_font_15.render(self.name, True, tools.black)
-                self.gems_label = tools.Insula_font_15.render(str(self.gems), True, tools.black)
-                self.time = tools.Insula_font_15.render(tools.clock(), True, tools.black)
+                self.level = tools.Trajan_font_15.render(self.level_title, True, tools.white)  # level ID text
+                self.battlename = tools.Insula_font_15.render(self.name, True, tools.black)  # battle's name text
+                self.gems_label = tools.Insula_font_15.render(str(self.gems), True, tools.black)  # amount of gems text
+                self.time = tools.Insula_font_15.render(tools.clock(), True, tools.black)  # game time text
 
                 # --- show ---
-                self.screen.blit(self.background, (0, 0))
-                self.grid.update()
-                self.cursor.update()
-                self.screen.blit(self.frame_image, (0, 0))
-                self.screen.blit(self.level, (219, 39))
-                self.screen.blit(self.battlename, (72, 76))
-                self.screen.blit(self.gems_label, (223, 76))
-                self.screen.blit(self.time, (380, 76))
+                self.screen.blit(self.background, (0, 0))  # background
+                self.grid.update()  # matrix
+                self.cursor.update()  # cursor update
+                self.screen.blit(self.frame_image, (0, 0))  # gui frame
+                self.screen.blit(self.level, (219, 39))  # level ID text
+                self.screen.blit(self.battlename, (72, 76))  # battle's name text
+                self.screen.blit(self.gems_label, (223, 76))  # amount of gems text
+                self.screen.blit(self.time, (380, 76))  # game time text
                 # --- update ---
                 self.save_button.update(self.screen, self.cursor)
                 self.muted_button.update(self.screen, self.cursor)
@@ -286,6 +299,7 @@ class Game:
 
 
 class AfterGame:
+    # screen:display settings, name:battle name,  duration: game play time , main_screen:menu screen class
     def __init__(self, screen, name, duration, main_screen):
         # --- load source/resources ---
         self.backgrounds = ["source/resources/gui/backgrounds/gameover.jpg",
@@ -297,9 +311,9 @@ class AfterGame:
                          "source/resources/gui/props/win_3.png", "source/resources/gui/props/win_4.png"]
         self.button_menu_st0 = pygame.image.load("source/resources/gui/buttons/b0_menu.png")  # normal state image
         self.button_menu_st1 = pygame.image.load("source/resources/gui/buttons/b1_menu.png")  # active state image
-        # --- AfterGame methods ---
-        self.cursor = tools.Cursor()  # Cursor, from the class Cursor in the tools py
-        # --- AfterGame variables ---
+        # --- after-game methods ---
+        self.cursor = tools.Cursor()  # cursor graphic method from tools.py
+        # --- after-game variables ---
         self.screen = screen
         self.name = name
         self.time = duration
@@ -308,21 +322,26 @@ class AfterGame:
         self.menu_button = tools.Button(self.button_menu_st0, self.button_menu_st1, 375, 15)
 
     def game_over(self):
-        tools.sounds("source/resources/gui/sounds/game_over.wav", 1)
-        self.main_screen.screen_state = "game_over"
-        self.background = pygame.image.load(self.backgrounds[0])
-        self.shield = pygame.image.load(self.shields[random.randint(0, 4)])
+        # game over screen setup
+        tools.sounds("source/resources/gui/sounds/game_over.wav", 1)  # play game over song theme
+        self.main_screen.screen_state = "game_over"  # screen ID
+        self.background = pygame.image.load(self.backgrounds[0])  # background img
+        self.shield = pygame.image.load(self.shields[random.randint(0, 4)])  # chooses a random image from shields-dic
 
     def winner(self):
-        tools.music("source/resources/gui/sounds/victory.mp3", 0.2 , -1)
-        self.main_screen.screen_state = "winner"
-        self.background = pygame.image.load(self.backgrounds[1])
-        self.trophy = pygame.image.load(self.trophies[random.randint(0, 3)])
+        # victory screen setup
+        tools.music("source/resources/gui/sounds/victory.mp3", 0.2 , -1)  # play victory song theme
+        self.main_screen.screen_state = "winner"  # screen ID
+        self.background = pygame.image.load(self.backgrounds[1])  # background img
+        self.trophy = pygame.image.load(self.trophies[random.randint(0, 3)])  # chooses a random image from trophies-dic
+
+        # storage information to be displayed on scores screen (battle name and duration of battle)
         file = open("source/resources/data/scores.txt", "a", encoding='utf-8')
         file.write("\n" + self.name + "," + str(self.time))
         file.close()
 
     def setup(self):
+        # method, main function of the after game screen, managing events and displaying objects on screen
         while True:
             pygame.display.update()
             self.screen.blit(self.background, (0, 0))  # background
@@ -336,18 +355,20 @@ class AfterGame:
                     # --- cursor events ---
                     if self.main_screen.screen_state == "game_over":
                         if self.cursor.colliderect(self.menu_button):
+                            # back to main menu screen
                             menu_screen = menu.MenuScreen()
                             menu_screen.menu()
                             menu_screen.start_game()
                     elif self.main_screen.screen_state == "winner":
                         if self.cursor.colliderect(self.menu_button):
+                            # back to main menu screen
                             menu_screen = menu.MenuScreen()
                             menu_screen.menu()
                             menu_screen.start_game()
             # --- graphics ---
             if self.main_screen.screen_state == "game_over":
                 self.menu_button.update(self.screen, self.cursor)
-                self.screen.blit(self.shield, (190, 275))  # shield
+                self.screen.blit(self.shield, (190, 275))  # shield img
             elif self.main_screen.screen_state == "winner":
                 self.menu_button.update(self.screen, self.cursor)
-                self.screen.blit(self.trophy, (190, 275))  # trophy
+                self.screen.blit(self.trophy, (190, 275))  # trophy img
