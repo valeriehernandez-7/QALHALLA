@@ -1,13 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="553c5207-13bf-4788-975f-692ac278a651" name="Default Changelist" comment="" />
+    <list default="true" id="553c5207-13bf-4788-975f-692ac278a651" name="Default Changelist" comment="initial commit">
+      <change beforePath="$PROJECT_DIR$/.idea/QALHALLA.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/QALHALLA.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/classes/titans.py" beforeDir="false" afterPath="$PROJECT_DIR$/source/classes/titans.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/resources/data/sessions.json" beforeDir="false" afterPath="$PROJECT_DIR$/source/resources/data/sessions.json" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1fFbzeAStmryowWC8J0OUptEbov" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -16,6 +35,37 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="configurable.group.project" />
+  </component>
+  <component name="RunManager">
+    <configuration name="QALHALLA" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="QALHALLA" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/QALHALLA.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.QALHALLA" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -28,10 +78,67 @@
       <option name="presentableId" value="Default" />
       <updated>1595817051520</updated>
       <workItem from="1595817054280" duration="183000" />
+      <workItem from="1595817327162" duration="257000" />
+      <workItem from="1595817595342" duration="1458000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="2" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="LAST_COMMIT_MESSAGE" value="" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="722" y="140" key="#QALHALLA" timestamp="1595819683981">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="722" y="140" key="#QALHALLA/0.0.1920.1080@0.0.1920.1080" timestamp="1595819683981" />
+    <state x="414" y="194" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1595819669188">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="414" y="194" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1595819669188" />
+    <state x="267" y="282" key="FileChooserDialogImpl" timestamp="1595817358190">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="267" y="282" key="FileChooserDialogImpl/0.0.1920.1080@0.0.1920.1080" timestamp="1595817358190" />
+    <state x="668" y="456" key="Github.ShareDialog" timestamp="1595817758211">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="668" y="456" key="Github.ShareDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1595817758211" />
+    <state x="812" y="239" key="Github.UntrackedFilesDialog" timestamp="1595817623037">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="812" y="239" key="Github.UntrackedFilesDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1595817623037" />
+    <state x="383" y="170" key="SettingsEditor" timestamp="1595817497169">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="383" y="170" key="SettingsEditor/0.0.1920.1080@0.0.1920.1080" timestamp="1595817497169" />
+    <state x="79" y="272" key="Vcs.Push.Dialog.v2" timestamp="1595817421415">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="79" y="272" key="Vcs.Push.Dialog.v2/0.0.1920.1080@0.0.1920.1080" timestamp="1595817421415" />
+    <state x="331" y="403" key="git4idea.rebase.GitRebaseDialog" timestamp="1595817483779">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="331" y="403" key="git4idea.rebase.GitRebaseDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1595817483779" />
+    <state x="150" y="239" key="search.everywhere.popup" timestamp="1595817486858">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="150" y="239" key="search.everywhere.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1595817486858" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/QALHALLA$QALHALLA.coverage" NAME="QALHALLA Coverage Results" MODIFIED="1595819689823" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>

@@ -60,7 +60,7 @@ class Titan:
         self.section.object = None
         self.section.game.gems += 75
         self.section.game.murders += 1
-        print(" ☠ Titans' deaths", self.section.game.murders, "☠")
+        print("☠ Titans' deaths", self.section.game.murders, "☠")
 
     def update(self):
         for projectile in self.projectiles:
@@ -90,7 +90,7 @@ class Skeleton(Titan):
             temp = get_nearest(identifier, self.matrix.sections)
             if temp:
                 self.projectiles.append(Projectile(self.screen, self.projectile_path, temp.object, self))
-                print(" ⤞ Skeleton attack", temp.id, "⤞")
+                print("⤞ Skeleton attack", temp.id, "⤞")
                 # Activate animation for attack
 
 
@@ -119,7 +119,7 @@ class Orc(Titan):
             temp = self.matrix.sections[identifier[0]][identifier[1] + 1]
             if temp.object and elementals.Elemental.__subclasscheck__(temp.object.__class__):
                 temp.on_attack(self.attack_power)
-                print(" ✠ Orc attack", temp.id, "✠")
+                print("✠ Orc attack", temp.id, "✠")
                 # Activate animation for attack
 
 
