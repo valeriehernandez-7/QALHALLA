@@ -20,7 +20,10 @@ def get_nearest(actual, matrix):
 
 class Titan:
     def __init__(self, info, matrix, section, path, pos_y, initial_time):
-        self.health, self.attack_power, self.attack_freq, self.move_freq = info[0], info[1], info[2], info[3]
+        self.health = info[0]  # titan's life amount
+        self.attack_power = info[1]  # titan's attack power amount
+        self.attack_freq = info[2]  # titan's attack frequency
+        self.move_freq = info[3]  # titan's move frequency
         self.matrix = matrix
         self.initial_time = initial_time
         self.section = section

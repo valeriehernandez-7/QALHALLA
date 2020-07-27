@@ -278,6 +278,7 @@ class MenuScreen:
             elif self.screen_state == "game":  # decides to create or load game
                 if not self.game:
                     self.game = game.Game(self.name_text,self.screen, self.difficulty, self.gems, self.start_level,self)
+                self.game.load_game()
                 self.game.start_game()
 
             elif self.screen_state == "load_game":  # battle loading screen graphics

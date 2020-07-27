@@ -105,10 +105,12 @@ class Game:
         #  the lvl# method or shows the winner screen
         if self.murders == 10 and self.screen_state != "lvl2":
             tools.sounds("source/resources/gui/sounds/level_up.wav", 0.5)
+            self.gems += 50
             self.screen_state = "lvl2"  # screen ID
             self.lvl2()
         if self.murders == 20 and self.screen_state != "lvl3":
             tools.sounds("source/resources/gui/sounds/level_up.wav", 0.5)
+            self.gems += 50
             self.screen_state = "lvl3"  # screen ID
             self.lvl3()
         if self.murders == 50:
@@ -118,6 +120,14 @@ class Game:
             after_game = AfterGame(self.screen, self.name, int(time.time() - initial), self.menu)
             after_game.winner()  # winner screen
             after_game.setup()  # after_game class loop
+
+    def load_game(self):  # method, returns level according to start_level argument
+        if self.screen_state == "lvl1":
+            self.lvl1()
+        elif self.screen_state == "lvl2":
+            self.lvl2()
+        elif self.screen_state == "lvl3":
+            self.lvl3()
 
     def cards_cs(self):
         # method, cards control system is in charge of enabling and disabling the purchase options

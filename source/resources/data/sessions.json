@@ -1,22 +1,85 @@
 {
     "name": "Ragnarok",
-    "difficulty": "MAESTRO",
-    "date": "2020-07-26",
-    "hour": "21:21",
-    "duration": "00:09",
-    "level": "lvl1",
-    "gems": 250,
-    "murders": 0,
-    "titans": [
+    "difficulty": "MONJE",
+    "date": "2020-07-27",
+    "hour": "04:13",
+    "duration": "04:54",
+    "level": "lvl3",
+    "gems": 530,
+    "murders": 40,
+    "titans": [],
+    "elementals": [
         {
-            "type": "Skeleton",
+            "type": "Fire",
             "position": [
                 0,
-                0
+                8
             ],
-            "health": 5,
+            "health": 13,
+            "time": 55
+        },
+        {
+            "type": "Air",
+            "position": [
+                1,
+                6
+            ],
+            "health": 12,
+            "time": 7
+        },
+        {
+            "type": "Earth",
+            "position": [
+                1,
+                8
+            ],
+            "health": 8,
+            "time": 12
+        },
+        {
+            "type": "Air",
+            "position": [
+                2,
+                5
+            ],
+            "health": 12,
+            "time": 2
+        },
+        {
+            "type": "Earth",
+            "position": [
+                2,
+                7
+            ],
+            "health": 10,
+            "time": 36
+        },
+        {
+            "type": "Air",
+            "position": [
+                3,
+                6
+            ],
+            "health": 12,
+            "time": 5
+        },
+        {
+            "type": "Earth",
+            "position": [
+                3,
+                8
+            ],
+            "health": 8,
+            "time": 46
+        },
+        {
+            "type": "Fire",
+            "position": [
+                4,
+                8
+            ],
+            "health": 18,
             "time": 9
         }
-    ],
-    "elementals": []
+    ]
 }
