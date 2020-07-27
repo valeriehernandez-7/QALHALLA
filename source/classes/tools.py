@@ -329,17 +329,28 @@ class SessionManager:
         return temp_game
 
     def get_game_state(self, game):
-        data = {"name": game.name, "difficulty": game.difficulty, "date": str(game.today.date()),
-                "hour": str(game.today.time())[:5], "duration": clock(), "level": game.screen_state, "gems": game.gems,
-                "murders": game.murders, "titans": self.get_titans(game), "elementals": self.get_elementals(game)}
+        data = {}
+        data["name"] = game.name
+        data["difficulty"] = game.difficulty
+        data["date"] = str(game.today.date())
+        data["hour"] = str(game.today.time())[:5]
+        data["duration"] = clock()
+        data["level"] = game.screen_state
+        data["gems"] = game.gems
+        data["murders"] = game.murders
+        data["titans"] = self.get_titans(game)
+        data["elementals"] = self.get_elementals(game)
         return data
 
     def get_elementals(self, game):
         array = game.grid.get_elementals(0, 0, [])
         result = []
         for elemental in array:
-            data = {"type": elemental.__class__.__name__, "position": elemental.section.id, "health": elemental.health,
-                    "time": int(time.time() - elemental.initial_time)}
+            data = {}
+            data["type"] = elemental.__class__.__name__
+            data["position"] = elemental.section.id
+            data["health"] = elemental.health
+            data["time"] = int(time.time() - elemental.initial_time)
             result.append(data)
         return result
 
@@ -347,8 +358,11 @@ class SessionManager:
         array = game.grid.get_titans(0, 0, [])
         result = []
         for titan in array:
-            data = {"type": titan.__class__.__name__, "position": titan.section.id, "health": titan.health,
-                    "time": int(time.time() - titan.initial_time)}
+            data = {}
+            data["type"] = titan.__class__.__name__
+            data["position"] = titan.section.id
+            data["health"] = titan.health
+            data["time"] = int(time.time() - titan.initial_time)
             result.append(data)
         return result
 

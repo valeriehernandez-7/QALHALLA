@@ -2,84 +2,139 @@
     "name": "Ragnarok",
     "difficulty": "MONJE",
     "date": "2020-07-27",
-    "hour": "04:13",
-    "duration": "04:54",
+    "hour": "16:39",
+    "duration": "04:45",
     "level": "lvl3",
-    "gems": 530,
-    "murders": 40,
-    "titans": [],
+    "gems": 115,
+    "murders": 32,
+    "titans": [
+        {
+            "type": "Skeleton",
+            "position": [
+                0,
+                0
+            ],
+            "health": 5,
+            "time": 2
+        },
+        {
+            "type": "Orc",
+            "position": [
+                1,
+                0
+            ],
+            "health": 20,
+            "time": 2
+        },
+        {
+            "type": "Elf",
+            "position": [
+                3,
+                0
+            ],
+            "health": 2,
+            "time": 10
+        },
+        {
+            "type": "Dragon",
+            "position": [
+                4,
+                0
+            ],
+            "health": 25,
+            "time": 2
+        }
+    ],
     "elementals": [
         {
-            "type": "Fire",
+            "type": "Air",
+            "position": [
+                0,
+                5
+            ],
+            "health": 7,
+            "time": 27
+        },
+        {
+            "type": "Water",
             "position": [
                 0,
                 8
             ],
-            "health": 13,
-            "time": 55
-        },
-        {
-            "type": "Air",
-            "position": [
-                1,
-                6
-            ],
-            "health": 12,
-            "time": 7
-        },
-        {
-            "type": "Earth",
-            "position": [
-                1,
-                8
-            ],
-            "health": 8,
-            "time": 12
-        },
-        {
-            "type": "Air",
-            "position": [
-                2,
-                5
-            ],
-            "health": 12,
-            "time": 2
-        },
-        {
-            "type": "Earth",
-            "position": [
-                2,
-                7
-            ],
             "health": 10,
-            "time": 36
-        },
-        {
-            "type": "Air",
-            "position": [
-                3,
-                6
-            ],
-            "health": 12,
-            "time": 5
-        },
-        {
-            "type": "Earth",
-            "position": [
-                3,
-                8
-            ],
-            "health": 8,
-            "time": 46
+            "time": 53
         },
         {
             "type": "Fire",
             "position": [
+                1,
+                4
+            ],
+            "health": 18,
+            "time": 14
+        },
+        {
+            "type": "Earth",
+            "position": [
+                1,
+                7
+            ],
+            "health": 14,
+            "time": 49
+        },
+        {
+            "type": "Fire",
+            "position": [
+                2,
+                3
+            ],
+            "health": 14,
+            "time": 20
+        },
+        {
+            "type": "Earth",
+            "position": [
+                2,
+                6
+            ],
+            "health": 14,
+            "time": 43
+        },
+        {
+            "type": "Fire",
+            "position": [
+                3,
+                4
+            ],
+            "health": 18,
+            "time": 1
+        },
+        {
+            "type": "Earth",
+            "position": [
+                3,
+                7
+            ],
+            "health": 9,
+            "time": 45
+        },
+        {
+            "type": "Air",
+            "position": [
+                4,
+                5
+            ],
+            "health": 10,
+            "time": 31
+        },
+        {
+            "type": "Water",
+            "position": [
                 4,
                 8
             ],
-            "health": 18,
-            "time": 9
+            "health": 13,
+            "time": 55
         }
     ]
 }

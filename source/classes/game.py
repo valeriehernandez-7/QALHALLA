@@ -49,10 +49,9 @@ class Game:
 
         # --- game variables ---
         self.screen = screen
-        self.menu = main_menu
+        self.menu = main_menu  # menu
         self.screen_state = start_level  # screen ID
-        self.level_title = "Nivel 1"  # level text
-        self.background = pygame.image.load("source/resources/gui/backgrounds/lvl1.jpg")  # background img
+        self.start_level = start_level   # lvl screen ID
         self.today = datetime.datetime.now()  # current date
         self.name = name  # battle name
         self.gems = gems  # gem counter, defines the value available to buy elementals
@@ -63,6 +62,7 @@ class Game:
         self.gameover = False
         self.started = False
         self.moving = False
+        self.grid = None
 
         # --- game methods ---
         self.cursor = tools.Cursor()  # Cursor, class from tools.py
@@ -104,14 +104,14 @@ class Game:
         #  method, according to the number of deaths of titans, the function changes the display identifier and calls up
         #  the lvl# method or shows the winner screen
         if self.murders == 10 and self.screen_state != "lvl2":
+            self.screen_state = "lvl2"  # screen ID
             tools.sounds("source/resources/gui/sounds/level_up.wav", 0.5)
             self.gems += 50
-            self.screen_state = "lvl2"  # screen ID
             self.lvl2()
         if self.murders == 20 and self.screen_state != "lvl3":
+            self.screen_state = "lvl3"  # screen ID
             tools.sounds("source/resources/gui/sounds/level_up.wav", 0.5)
             self.gems += 50
-            self.screen_state = "lvl3"  # screen ID
             self.lvl3()
         if self.murders == 50:
             self.screen_screen = "winner"  # screen ID

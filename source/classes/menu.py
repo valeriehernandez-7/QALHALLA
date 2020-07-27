@@ -50,6 +50,7 @@ class MenuScreen:
         self.screen = pygame.display.set_mode((500, 700))  # screen size graphic method
         self.cursor = tools.Cursor()  # cursor graphic method from tools.py
         self.update_screen = pygame.display.update()  # pygame update
+        self.screen_state = "menu"
         self.game = None
         self.difficulty = None
 
