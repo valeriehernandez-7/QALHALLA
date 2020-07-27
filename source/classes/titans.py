@@ -60,7 +60,7 @@ class Titan:
         self.section.object = None
         self.section.game.gems += 75
         self.section.game.murders += 1
-        print("☠ Titan's deaths", self.section.game.murders, "☠")
+        print("☠ Titans deaths", self.section.game.murders, "☠")
 
     def update(self):
         for projectile in self.projectiles:
