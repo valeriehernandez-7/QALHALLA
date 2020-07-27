@@ -28,13 +28,13 @@ class Elemental:
         self.attack_power = info[1]  # elemental's attack power amount
         self.attack_freq = matrix.game.attack_freq  # elemental's attack frequency
         self.projectile_path = ""  # attack img
-        self.projectiles = []  #
+        self.projectiles = []  # projectile control list
         self.matrix = matrix
-        self.section = None
-        self.pos = ()
+        self.section = None  # default section
+        self.pos = ()  # default position
         self.screen = self.matrix.screen
-        self.image = pygame.image.load(path)
-        self.initial_time = 0
+        self.image = pygame.image.load(path)  # load elemental img
+        self.initial_time = 0  # default time reference
 
     def attack(self):
         # method, returns the projectile to the matrix section where the nearest titan is located, depending on the
@@ -108,19 +108,22 @@ class Fire(Elemental):
 
 
 class Projectile:
+    # screen: screen, path: filepath, elemental: elemental attacking, titan: titan under attack
     def __init__(self, screen, path, elemental, titan):
+        # in charge of generating the projectiles of the elemental, move it from the position of the elemental to
+        # the position of the titan and discount the power of attack to the titan's health
         self.screen = screen
-        self.image = pygame.image.load(path)
-        self.elemental = elemental
-        self.pos = self.elemental.section.pos
-        self.titan = titan
+        self.image = pygame.image.load(path)  # load attack img
+        self.elemental = elemental  # elemental ID
+        self.pos = self.elemental.section.pos  # elemental position
+        self.titan = titan  # titan ID
 
     def update(self):
-        self.pos = (self.pos[0], self.pos[1] - 3)
-        self.screen.blit(self.image, self.pos)
-        if self.pos[1] <= self.titan.pos[1]:
-            if self.titan.health > 0:
-                self.titan.hurt(self.elemental.attack_power)
-            self.elemental.projectiles.remove(self)
-        if self.pos[1] < -51:
-            self.elemental.projectiles.remove(self)
+        self.pos = (self.pos[0], self.pos[1] - 3)  # projectile position
+        self.screen.blit(self.image, self.pos)  # show projectile
+        if self.pos[1] <= self.titan.pos[1]:  # projectile movement to titan
+            if self.titan.health > 0:  # living titan
+                self.titan.hurt(self.elemental.attack_power)  # discount attack power to titan's health
+            self.elemental.projectiles.remove(self)  # dead titan, removes projectile
+        if self.pos[1] < -50:  # projectile movement to screen edge
+            self.elemental.projectiles.remove(self)  # remove projectile
