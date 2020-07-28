@@ -90,25 +90,25 @@ class Game:
         # method, defines the settings for the level 2 screen
         self.background = pygame.image.load("source/resources/gui/backgrounds/lvl2.jpg")  # background img
         self.level_title = "Nivel 2"  # level text
-        self.grid.clean()  # clean matrix
         self.frequency = 0.3  # frequency increases by 30%
 
     def lvl3(self):
         # method, defines the settings for the level 3 screen
         self.background = pygame.image.load("source/resources/gui/backgrounds/lvl3.jpg")  # background img
         self.level_title = "Nivel 3"  # level text
-        self.grid.clean()  # clean matrix
         self.frequency = 0.6  # frequency increases by 60%
 
     def change_level(self, initial):
         #  method, according to the number of deaths of titans, the function changes the display identifier and calls up
         #  the lvl# method or shows the winner screen
         if self.murders == 10 and self.screen_state != "lvl2":
+            self.grid.clean()  # clean matrix
             self.screen_state = "lvl2"  # screen ID
             tools.sounds("source/resources/gui/sounds/level_up.wav", 0.5)
             self.gems += 50
             self.lvl2()
         if self.murders == 20 and self.screen_state != "lvl3":
+            self.grid.clean()  # clean matrix
             self.screen_state = "lvl3"  # screen ID
             tools.sounds("source/resources/gui/sounds/level_up.wav", 0.5)
             self.gems += 50

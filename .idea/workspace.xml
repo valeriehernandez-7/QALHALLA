@@ -10,10 +10,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="553c5207-13bf-4788-975f-692ac278a651" name="Default Changelist" comment="files updated">
+    <list default="true" id="553c5207-13bf-4788-975f-692ac278a651" name="Default Changelist" comment="props updated">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/source/classes/game.py" beforeDir="false" afterPath="$PROJECT_DIR$/source/classes/game.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/classes/menu.py" beforeDir="false" afterPath="$PROJECT_DIR$/source/classes/menu.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/source/classes/tools.py" beforeDir="false" afterPath="$PROJECT_DIR$/source/classes/tools.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/source/resources/data/sessions.json" beforeDir="false" afterPath="$PROJECT_DIR$/source/resources/data/sessions.json" afterDir="false" />
     </list>
@@ -36,7 +35,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../TD VERSION/QALHALLA/source/classes/game.py" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="configurable.group.project" />
     <property name="two.files.diff.last.used.file" value="$PROJECT_DIR$/../TD VERSION/QALHALLA/source/classes/game.py" />
   </component>
@@ -83,7 +82,9 @@
       <workItem from="1595817327162" duration="257000" />
       <workItem from="1595817595342" duration="21446000" />
       <workItem from="1595844606655" duration="538000" />
-      <workItem from="1595884336870" duration="5525000" />
+      <workItem from="1595884336870" duration="5631000" />
+      <workItem from="1595890849620" duration="2120000" />
+      <workItem from="1595895529295" duration="1604000" />
     </task>
     <task id="LOCAL-00001" summary="titans updated">
       <created>1595820023942</created>
@@ -134,7 +135,21 @@
       <option name="project" value="LOCAL" />
       <updated>1595845084226</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="files updated">
+      <created>1595889956566</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1595889956566</updated>
+    </task>
+    <task id="LOCAL-00009" summary="props updated">
+      <created>1595893695308</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1595893695308</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -156,7 +171,8 @@
     <MESSAGE value="titans updated" />
     <MESSAGE value="elementals updated" />
     <MESSAGE value="files updated" />
-    <option name="LAST_COMMIT_MESSAGE" value="files updated" />
+    <MESSAGE value="props updated" />
+    <option name="LAST_COMMIT_MESSAGE" value="props updated" />
   </component>
   <component name="WindowStateProjectService">
     <state x="722" y="140" key="#QALHALLA" timestamp="1595819683981">
@@ -171,10 +187,10 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="333" y="-23" width="1143" height="870" maximized="true" key="DiffContextDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1595888513026" />
-    <state x="363" y="174" key="FileChooserDialogImpl" timestamp="1595888256408">
+    <state x="363" y="174" key="FileChooserDialogImpl" timestamp="1595893512104">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="363" y="174" key="FileChooserDialogImpl/0.0.1920.1080@0.0.1920.1080" timestamp="1595888256408" />
+    <state x="363" y="174" key="FileChooserDialogImpl/0.0.1920.1080@0.0.1920.1080" timestamp="1595893512104" />
     <state x="668" y="456" key="Github.ShareDialog" timestamp="1595817758211">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
@@ -183,30 +199,30 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="812" y="239" key="Github.UntrackedFilesDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1595817623037" />
-    <state width="1876" height="280" key="GridCell.Tab.0.bottom" timestamp="1595889545083">
+    <state width="1876" height="279" key="GridCell.Tab.0.bottom" timestamp="1595897003157">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1876" height="280" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1595889545083" />
-    <state width="1876" height="280" key="GridCell.Tab.0.center" timestamp="1595889545083">
+    <state width="1876" height="279" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1595897003157" />
+    <state width="1876" height="279" key="GridCell.Tab.0.center" timestamp="1595897003157">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1876" height="280" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1595889545083" />
-    <state width="1876" height="280" key="GridCell.Tab.0.left" timestamp="1595889545083">
+    <state width="1876" height="279" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1595897003157" />
+    <state width="1876" height="279" key="GridCell.Tab.0.left" timestamp="1595897003157">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1876" height="280" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1595889545083" />
-    <state width="1876" height="280" key="GridCell.Tab.0.right" timestamp="1595889545083">
+    <state width="1876" height="279" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1595897003157" />
+    <state width="1876" height="279" key="GridCell.Tab.0.right" timestamp="1595897003157">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1876" height="280" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1595889545083" />
+    <state width="1876" height="279" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1595897003157" />
     <state x="383" y="170" key="SettingsEditor" timestamp="1595817497169">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="383" y="170" key="SettingsEditor/0.0.1920.1080@0.0.1920.1080" timestamp="1595817497169" />
-    <state x="79" y="272" key="Vcs.Push.Dialog.v2" timestamp="1595845087104">
+    <state x="79" y="272" key="Vcs.Push.Dialog.v2" timestamp="1595889958705">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="79" y="272" key="Vcs.Push.Dialog.v2/0.0.1920.1080@0.0.1920.1080" timestamp="1595845087104" />
+    <state x="79" y="272" key="Vcs.Push.Dialog.v2/0.0.1920.1080@0.0.1920.1080" timestamp="1595889958705" />
     <state x="789" y="454" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1595884370426">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
@@ -225,6 +241,6 @@
     <state x="150" y="239" key="search.everywhere.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1595817486858" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/QALHALLA$QALHALLA.coverage" NAME="QALHALLA Coverage Results" MODIFIED="1595889545074" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/QALHALLA$QALHALLA.coverage" NAME="QALHALLA Coverage Results" MODIFIED="1595897138773" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
