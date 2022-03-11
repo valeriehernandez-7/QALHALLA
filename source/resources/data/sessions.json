@@ -1,0 +1,59 @@
+{
+  "name": "Valerie",
+  "difficulty": "AVATAR",
+  "date": "2020-07-27",
+  "hour": "18:29",
+  "duration": "02:57",
+  "level": "lvl2",
+  "gems": 510,
+  "murders": 12,
+  "titans": [
+    {
+      "type": "Dragon",
+      "position": [
+        3,
+        0
+      ],
+      "health": 25,
+      "time": 13
+    },
+    {
+      "type": "Dragon",
+      "position": [
+        4,
+        0
+      ],
+      "health": 21,
+      "time": 13
+    }
+  ],
+  "elementals": [
+    {
+      "type": "Fire",
+      "position": [
+        0,
+        6
+      ],
+      "health": 14,
+      "time": 17
+    },
+    {
+      "type": "Earth",
+      "position": [
+        2,
+        5
+      ],
+      "health": 10,
+      "time": 19
+    },
+    {
+      "type": "Air",
+      "position": [
+        4,
+        6
+      ],
+      "health": 12,
+      "time": 15
+    }
+  ]
+}

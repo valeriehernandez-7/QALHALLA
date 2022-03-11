@@ -1,0 +1,10 @@
+Halldora,201
+Raknarok,200
+Otkatla,1333
+Rannveig,879
+Vilborg,2345
+Gardar,3590
+Ketill,2378
+Hallvard,9384
+Thorfinn,83747
+Sigmund,938473
